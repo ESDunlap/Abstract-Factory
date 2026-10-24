@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: cd6dc3efc67026f4abd2a047e368e9d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - holdingCupPrefab: {fileID: 537114845578012891, guid: 2f89f5cd4b417b647b6a8bf160cd89b3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

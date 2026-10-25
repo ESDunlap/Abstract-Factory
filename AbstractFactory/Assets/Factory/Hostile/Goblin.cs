@@ -21,7 +21,7 @@ public class Goblin : MonoBehaviour, INPC
         {
             float movement = movementSpeed * Time.deltaTime;
             Vector3 currentLocation = transform.position;
-            Vector3 endLocation = target.transform.position;
+            Vector3 endLocation = target.transform.position - target.transform.forward;
             float distance = Vector3.Distance(currentLocation, endLocation);
             if (distance > movement)
             {
@@ -42,10 +42,11 @@ public class Goblin : MonoBehaviour, INPC
     {
         if (target == null)
         {
+            Debug.Log("SEARCHING FOR TARGET!");
             Medium[] possibleTargets = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<Medium>().ToArray();
-            if (possibleTargets != null)
+            if (possibleTargets.Length != 0)
             {
-                target = possibleTargets[0].getGameObject();
+                target = possibleTargets[Random.Range(0, possibleTargets.Length-1)].getGameObject();
             }
         }
     }
